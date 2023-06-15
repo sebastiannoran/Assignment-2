@@ -16,16 +16,17 @@
 const jobTitles = ["Engineer", "Product Manager", "Director", "Nurse"];
 const secondTitles = [];
 
-//jobTitles.forEach(element => console.log(element));
+jobTitles.forEach(element => console.log(element));
 
 let myCallBack = function (arr) {
     for (i = 0; i < arr.length; i++) {
-        console.log(secondTitles.push(arr[i]))
+            secondTitles.push(arr[i]);
     }
+        return secondTitles
 }
 
 let myEach = function (arr) {
-    return myCallBack(arr);
+        console.log(myCallBack(arr));
  }
 
 myEach(jobTitles);
