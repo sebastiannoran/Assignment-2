@@ -11,5 +11,9 @@
      * If thisArg is omitted, undefined is used as the this value.
      */
 
-const jobTitles = ["Engineer", "Product Manager", "Director", "Nurse"];
+let jobTitles = ["Engineer", "Product Manager", "Director", "Nurse"];
+
+let adjustedTitles = jobTitles.map(function(element) 
+
+}
 
