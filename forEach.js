@@ -5,6 +5,7 @@
 //Without using the native “Array.prototype.forEach” method of JavaScript, 
 //compose a function titled “myEach” that will take in an array of elements 
 //and executes any callback function (provided by you) on each of those elements.
+//THIS isn't just a simple output fuction, the for each fuction targerts the array
 
     /*
      *forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
@@ -14,21 +15,30 @@
      */
 
 const jobTitles = ["Engineer", "Product Manager", "Director", "Nurse"];
-const secondTitles = [];
 
-//jobTitles.forEach(element => console.log(element));
+jobTitles.forEach(element => console.log(element));
 
-let myCallBack = function (arr) {
+// let myCallBack = function (arr) {
+//     for (i = 0; i < arr.length; i++) {
+//         console.log(secondTitles.push(arr[i]))
+//     }
+// }
+// //takes in an array and the callback fucntion
+// let myEach = function (arr, myCallBack) {
+//     return myCallBack(arr);
+//  }
+
+// myEach(jobTitles);
+
+const print = (element) => console.log(element);
+
+let customForEach = function (arr, cb) {
     for (i = 0; i < arr.length; i++) {
-        console.log(secondTitles.push(arr[i]))
+        cb(arr[i], i, arr);
     }
 }
 
-let myEach = function (arr) {
-    return myCallBack(arr);
- }
-
-myEach(jobTitles);
+customForEach(jobTitles, print);
 
 
 
