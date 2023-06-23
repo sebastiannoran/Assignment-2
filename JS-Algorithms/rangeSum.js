@@ -13,5 +13,25 @@
 
 
    let rangeFuction = function (start, end) {
-    
+    let output = [];
+
+    for (let i = start; i <= end; i++) {
+      output.push(i);
+    }
+    return output;
    }
+
+   function sumOfRange (arr) { // could it be the parameter def? 
+    let result = 0;
+    for (let j = 0; j < arr.length; j++) {
+      result += arr[j];
+    }
+    return result;
+   }
+   // spread operator --> ...args
+   // reduce function could work well with sumOfRange function --> 
+   // implement with 
+
+   console.log(rangeFuction(1,10));
+
+   console.log(sumOfRange(rangeFuction(1,10)));
