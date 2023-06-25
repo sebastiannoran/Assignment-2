@@ -34,11 +34,16 @@ const print = (element) => console.log(element);
 
 let customForEach = function (arr, cb) {
     for (i = 0; i < arr.length; i++) {
-        cb(arr[i], i, arr);
+            secondTitles.push(arr[i]);
     }
+    return secondTitles
 }
 
-customForEach(jobTitles, print);
+let myEach = function (arr) {
+        console.log(myCallBack(arr));
+ }
+
+myEach(jobTitles);
 
 
 
