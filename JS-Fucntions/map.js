@@ -13,7 +13,18 @@
 
 let jobTitles = ["Engineer", "Product Manager", "Director", "Nurse"];
 
-let adjustedTitles = jobTitles.map(function(element) 
+let adjustedTitles = jobTitles.map(element => console.log(element));
 
+const print = (element) => console.log(element);
+
+
+let customForEach = function (arr, cb) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        let result = cb(arr[i], i , arr);
+        newArr.push(result);
+    }
+    return newArr;
 }
 
+customForEach(jobTitles, print);
