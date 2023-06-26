@@ -6,9 +6,16 @@ let arr = {
 
 console.log(Object.keys(arr));
 
-let customObjKey = function (arr) {
+let customObjectKeys = function(obj) {
     let result = [];
-    for (let i = 0; i < arr.length; i++) {
-
-        }
+  
+    for (let key in obj) { //JS for loop syntax, improved!
+      if (obj.hasOwnProperty(key)) {
+        result.push(key);
+      }
     }
+  
+    return result;
+};
+
+console.log(customObjectKeys(arr));
